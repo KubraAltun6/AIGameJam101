@@ -9,11 +9,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadSceneAsync(1);
 
     }
-    public void PauseGame()
-    {
-        SceneManager.LoadSceneAsync(0);
-
-    }
+    
     public void ReturnMenu()
     {
         SceneManager.LoadSceneAsync(0);
