@@ -31,7 +31,7 @@ public class Kontrol : MonoBehaviour
         if (result[0] == correctCombination[0] && result[1] == correctCombination[1] && result[2] == correctCombination[2])
         {
             Debug.Log("opened");
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Gelecek");
         }
     }
     private void OnDestroy()

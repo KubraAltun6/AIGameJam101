@@ -11,7 +11,7 @@ public class TimerGecmis : MonoBehaviour
     [SerializeField] float remainingTime;
     [SerializeField] Slider timerSlider;
     [SerializeField] public float decSpeed=1;
-
+    [SerializeField] GameObject gameOver;
     private void Start()
     {
         timerSlider.maxValue = remainingTime;
@@ -31,7 +31,7 @@ public class TimerGecmis : MonoBehaviour
         else if (remainingTime < 0)
         {
             remainingTime= 0;
-            Debug.Log("Oyun Bitti");
+            GameOver();
         }
        
         int minutes = Mathf.FloorToInt(remainingTime / 60);
@@ -43,8 +43,12 @@ public class TimerGecmis : MonoBehaviour
     }
     public void PauseGame()
     {
-
+      
         decSpeed = 0;
+    }
+    public void GameOver()
+    {
+        gameOver.SetActive(true);
     }
     public void ContGame()
     {
